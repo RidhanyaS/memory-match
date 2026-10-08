@@ -6,24 +6,26 @@
 <title>Memory Match</title>
 <style>
   :root {
-    --bg: #eef0fb;
-    --ink: #1b1f4b;
-    --muted: #5a5f8a;
-    --back: #3b4bdb;
+    --bg: #def0fc;
+    --ink: #1d3a52;
+    --muted: #5b7f9a;
+    --back: #89cff0;
+    --btn-ink: #12324a;
     --face: #ffffff;
-    --good: #1fb58f;
-    --bad: #f2557b;
-    --panel: #ffffff;
+    --good: #3fbf9f;
+    --bad: #f27a93;
+    --panel: #f7fbff;
     box-sizing: border-box;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #12142e;
-      --ink: #eceeff;
-      --muted: #9aa0d4;
-      --back: #5565ee;
-      --face: #1f2250;
-      --panel: #1a1d44;
+      --bg: #0f2233;
+      --ink: #e6f4fd;
+      --muted: #8fb5d0;
+      --back: #5fb4de;
+      --btn-ink: #0b1f2f;
+      --face: #17344b;
+      --panel: #153047;
     }
   }
   *, *::before, *::after { box-sizing: inherit; }
@@ -58,8 +60,8 @@
     background: var(--panel); border: 2px solid transparent;
     border-radius: 12px; padding: 10px 16px; cursor: pointer;
   }
-  .btn { background: var(--back); color: #fff; font-weight: 600; }
-  .btn:hover { filter: brightness(1.1); }
+  .btn { background: var(--back); color: var(--btn-ink); font-weight: 600; }
+  .btn:hover { filter: brightness(1.06); }
   :focus-visible { outline: 3px solid var(--good); outline-offset: 2px; }
 
   #board {
@@ -89,11 +91,11 @@
   }
   .back {
     background: var(--back);
-    background-image: radial-gradient(circle at 30% 25%, rgba(255,255,255,.28), transparent 55%);
+    background-image: radial-gradient(circle at 30% 25%, rgba(255,255,255,.45), transparent 55%);
   }
   .back::after {
     content: ""; width: 28%; aspect-ratio: 1;
-    border: 3px solid rgba(255,255,255,.55); border-radius: 50%;
+    border: 3px solid rgba(255,255,255,.7); border-radius: 50%;
   }
   .front {
     background: var(--face);
@@ -110,7 +112,7 @@
     background: var(--panel); color: var(--ink); text-align: center;
     max-width: 340px;
   }
-  dialog::backdrop { background: rgba(10, 12, 40, .55); }
+  dialog::backdrop { background: rgba(15, 40, 65, .5); }
   dialog h2 { margin: 0 0 8px; }
   dialog p { margin: 4px 0; }
 
